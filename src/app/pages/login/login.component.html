@@ -1,0 +1,17 @@
+<div class="modal-content" style="flex-direction: column;">
+
+    <h1 class="title">DragonFly</h1>
+
+    <form [formGroup]="usuarioForm" #usuario="ngForm" class="form-content">
+        <div class="form-container">
+            <label for="usulog"><b>Usuário</b></label>
+            <input type="text" formControlName="usulog" placeholder="Informe seu usuário..." name="usulog" required>
+
+            <label for="usupwd"><b>Senha</b></label>
+            <input type="password" formControlName="usupwd" placeholder="Informe sua senha..." name="usupwd" required>
+
+            <button type="submit" [disabled]="false" class="button-login" (click)="login()">Login</button>
+
+        </div>
+    </form>
+</div>
