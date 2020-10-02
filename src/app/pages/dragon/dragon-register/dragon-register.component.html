@@ -1,1 +1,14 @@
-<p>dragon-register works!</p>
+<div class="modal-content" style="flex-direction: column;">
+    <h1>{{text}} Dragão</h1>
+    <form [formGroup]="dragonForm" #usuario="ngForm" class="form-content">
+        <div class="form-container">
+            <label for="name"><b>Nome</b></label>
+            <input type="text" formControlName="name" placeholder="Nome..." name="name" required>
+            <label for="type"><b>Tipo</b></label>
+            <input type="text" formControlName="type" placeholder="Tipo..." name="type" required>
+
+            <button type="submit" class="cancelar" (click)="cancelar()">Cancelar</button>
+            <button type="submit" class="salvar" (click)="salvar()">Salvar</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+button {
+    width: 50%;
+    height: 31px;
+    border: none;
+    color: white;
+}
+
+.salvar {
+    background-color: rgb(0, 47, 255);
+}
+
+.cancelar {
+    background-color: red;
+}

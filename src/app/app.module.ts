@@ -8,6 +8,7 @@ import { DragonListComponent } from './pages/dragon/dragon-list/dragon-list.comp
 import { DragonRegisterComponent } from './pages/dragon/dragon-register/dragon-register.component';
 import { NotFoundComponent } from './pages/utils/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

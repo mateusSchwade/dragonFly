@@ -1,1 +1,37 @@
-<p>dragon-list works!</p>
+<div class="container-dragon-right">
+    <button class="button-logout" (click)="logout()">Logout</button>
+</div>
+<div class="container-dragon">
+    <div>
+        <h1 class="title">DragonFly</h1>
+    </div>
+</div>
+
+<div class="container-dragon">
+    <input [(ngModel)]="filter" type="text" placeholder="Filtro..." (ngModelChange)="filterList()">
+    <button class="button-include" (click)="create()">Adicionar</button>
+</div>
+
+<div class="container-dragon">
+    <table style="overflow-x: auto">
+        <tr>
+            <th>Data Criação</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th style="width: 57px;">Editar</th>
+            <th style="width: 64px;">Excluir</th>
+        </tr>
+        <tr *ngFor="let dragon of listDragon">
+            <td>{{dragon.createdAt | date:'dd/MM/yyyy HH:mm'}}</td>
+            <td>{{dragon.name}}</td>
+            <td>{{dragon.type}}</td>
+            <td>
+                <button class="button-edit" (click)="edit(dragon)">Editar</button>
+            </td>
+            <td>
+                <button class="button-delete" (click)="delete(dragon)">Excluir</button>
+            </td>
+        </tr>
+    </table>
+
+</div>

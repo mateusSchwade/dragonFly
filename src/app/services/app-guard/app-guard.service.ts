@@ -13,8 +13,6 @@ export class AppGuardService {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 
     let login: any = window.localStorage.getItem('dwlounsa');
-    console.log(login)
-    console.log(atob(login))
 
     try {
       login = JSON.parse(atob(login))
