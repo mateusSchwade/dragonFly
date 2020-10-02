@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
       this.usuarioForm.reset();
       this.router.navigate(['dragon']);
     } else {
-      alert('Usuario não encontrado!');
+      alert('Usuário ou senha inválidos!');
     }
   }
 
